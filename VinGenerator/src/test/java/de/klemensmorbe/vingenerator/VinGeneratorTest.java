@@ -13,28 +13,28 @@ class VinGeneratorTest {
 
 	@Test
 	void whenRandomVinThenReturnLevelOneVin() {
-		final var result = VinGenerator.randomVin();
+		final var result = new VinGenerator().generate();
 
 		assertThat(result, matchesPattern(LEVEL_1_VIN_PATTERN));
 	}
 
 	@Test
 	void whenRandomVinGivenLevenOneThenReturnLevelOneVin() {
-		final var result = VinGenerator.randomVin(VinLevel.ONE);
+		final var result = new VinGenerator().withLevel(VinLevel.ONE).generate();
 
 		assertThat(result, matchesPattern(LEVEL_1_VIN_PATTERN));
 	}
 
 	@Test
 	void whenRandomVinGivenLevenTwoThenReturnLevelTwoVin() {
-		final var result = VinGenerator.randomVin(VinLevel.TWO);
+		final var result = new VinGenerator().withLevel(VinLevel.TWO).generate();
 
 		assertThat(result, matchesPattern(LEVEL_2_VIN_PATTERN));
 	}
 
 	@Test
 	void whenRandomVinGivenLevenThreeThenReturnLevelThreeVin() {
-		final var result = VinGenerator.randomVin(VinLevel.THREE);
+		final var result = new VinGenerator().withLevel(VinLevel.THREE).generate();
 
 		assertThat(result, matchesPattern(LEVEL_3_VIN_PATTERN));
 	}
