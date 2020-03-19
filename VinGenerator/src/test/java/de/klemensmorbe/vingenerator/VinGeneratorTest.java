@@ -12,6 +12,13 @@ class VinGeneratorTest {
 	private static final String LEVEL_3_VIN_PATTERN = "[A-HJ-NPR-Z0-9]{9}[0-9]{8}";
 
 	@Test
+	void whenRandomVinGivenNullLevelThenReturnLevelOneVin() {
+		final var result = new VinGenerator().withLevel(null).generate();
+
+		assertThat(result, matchesPattern(LEVEL_1_VIN_PATTERN));
+	}
+
+	@Test
 	void whenRandomVinThenReturnLevelOneVin() {
 		final var result = new VinGenerator().generate();
 
