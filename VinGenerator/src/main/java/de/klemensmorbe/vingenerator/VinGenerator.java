@@ -15,22 +15,22 @@ public class VinGenerator {
     private static final String LEVEL_3_VIS_ALPHABET = "0123456789";
 
     /**
-     * Total length of a VIN
+     * Total length of a VIN.
      */
     private static final int VIN_SIZE = 17;
 
     /**
-     * Length of the world manufacturer identifier of a VIN
+     * Length of the world manufacturer identifier of a VIN.
      */
     private static final int WMI_SIZE = 3;
 
     /**
-     * Length of the vehicle descriptor section of a VIN
+     * Length of the vehicle descriptor section of a VIN.
      */
     private static final int VDS_SIZE = 6;
 
     /**
-     * Length of the vehicle identifier section of a VIN
+     * Length of the vehicle identifier section of a VIN.
      */
     private static final int VIS_SIZE = 8;
 
